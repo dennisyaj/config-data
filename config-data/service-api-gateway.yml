@@ -1,14 +1,17 @@
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: app-authors-route
           uri: lb://service-app-authors
           predicates:
             - Path=/authors/**
-        
+
         - id: app-books-route
           uri: lb://service-app-books
           predicates:
             - Path=/books/**
-
+            - Path=/authors/**
