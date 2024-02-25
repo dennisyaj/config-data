@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: service-api-gateway
   cloud:
     gateway:
       routes:
@@ -8,7 +6,8 @@ spring:
           uri: lb://service-app-authors
           predicates:
             - Path=/authors/**
-       - id: app-books-route
+        
+        - id: app-books-route
           uri: lb://service-app-books
           predicates:
             - Path=/books/**
