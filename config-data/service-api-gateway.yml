@@ -5,12 +5,13 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: app-authors-route
+        - id: service-app-authors
           uri: lb://service-app-authors
           predicates:
             - Path=/authors/**
+            - Path=/authors/**
 
-        - id: app-books-route
+        - id: service-app-books
           uri: lb://service-app-books
           predicates:
             - Path=/books/**
