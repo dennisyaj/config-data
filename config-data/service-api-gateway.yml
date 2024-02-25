@@ -4,8 +4,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: app-books-route
-          uri: lb://service-app-books
+        - id: app-authors-route
+          uri: lb://service-app-authors
           predicates:
             - Path=/authors/**
-            - Path=/books/**
