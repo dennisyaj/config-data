@@ -9,7 +9,7 @@ spring:
           uri: lb://service-app-authors
           predicates:
             - Path=/authors/**
-            - Path=/authors/**
+            - Path=/books/**
 
         - id: service-app-books
           uri: lb://service-app-books
