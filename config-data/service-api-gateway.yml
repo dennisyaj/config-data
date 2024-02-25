@@ -7,4 +7,5 @@ spring:
         - id: app-books-route
           uri: lb://service-app-books
           predicates:
-            - Path=/authors/**,/books/**
+            - Path=/authors/**
+            - Path=/books/**
